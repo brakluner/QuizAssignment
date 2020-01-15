@@ -1,7 +1,7 @@
  var questions = [
    {
      title:"Where have all the cowboys gone?",
-     choices: ["Smoking Cigerettes", "replaced by the refrigerated car", "climbed a cactus to the stars", "went underground"],
+     choices: ["Smoking Cigerettes", "replaced by the refridgerated car", "climbed a cactus to the stars", "went underground"],
      answer: "replaced by the refridgerated car"
    },
    {
@@ -17,7 +17,7 @@
    {
      title:"how many moons does Uranus have?",
      choices:["Uranus is god of the sea", "27", "2","7"],
-     answer: "uranus is god of the sea"
+     answer: "Uranus is god of the sea"
    },
    {
      title:"Why are man-holes round?",

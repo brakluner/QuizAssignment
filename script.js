@@ -23,6 +23,7 @@ $(document).ready(function(){
 
         var answers = $("<button></button>").text(answer);
 
+        answers.addClass("ABCD" [i]);
         answers.addClass("button3");
         $("body").append(answers);
         }
@@ -30,9 +31,12 @@ $(document).ready(function(){
     $("h1").remove();
     $(document).ready(function(){
         $(".button3").click(function(event) {
-            if (choices = answers) {
-                (score += 5);
-            } else (score - 5)
+            if($(this).attr('class') == 'B button3'){
+                score+=15;
+            } else {
+                score+= -15;
+            }
+            
         var Quest = $("<div></div>").text(questions[1].title);
         
         Quest.addClass("form2")
@@ -42,7 +46,8 @@ $(document).ready(function(){
             var answer = questions[1].choices[i];
     
             var answers = $("<button></button>").text(answer);
-    
+            
+            answers.addClass("ABCD" [i]);
             answers.addClass("button4");
             $("body").append(answers);
             }
@@ -50,6 +55,12 @@ $(document).ready(function(){
         $(".form1").remove();
         $(document).ready(function(){
             $(".button4").click(function(event) {
+                if($(this).attr('class') == 'C button4'){
+                    score+=15;
+                } else {
+                    score+= -15;
+                }
+            
             var Quest = $("<div></div>").text(questions[2].title);
             
             Quest.addClass("form3")
@@ -59,7 +70,8 @@ $(document).ready(function(){
                 var answer = questions[2].choices[i];
         
                 var answers = $("<button></button>").text(answer);
-        
+                
+                answers.addClass("ABCD" [i]);
                 answers.addClass("button5");
                 $("body").append(answers);
                 }
@@ -67,6 +79,12 @@ $(document).ready(function(){
             $(".form2").remove();
             $(document).ready(function(){
                 $(".button5").click(function(event) {
+                    if($(this).attr('class') == 'D button5'){
+                        score+=15;
+                    } else {
+                        score+= -15;
+                    }
+                
                 var Quest = $("<div></div>").text(questions[3].title);
                 
                 Quest.addClass("form4")
@@ -76,7 +94,8 @@ $(document).ready(function(){
                     var answer = questions[3].choices[i];
             
                     var answers = $("<button></button>").text(answer);
-            
+                    
+                    answers.addClass("ABCD" [i]);
                     answers.addClass("button6");
                     $("body").append(answers);
                     }
@@ -84,6 +103,12 @@ $(document).ready(function(){
                 $(".form3").remove();
                 $(document).ready(function(){
                     $(".button6").click(function(event) {
+                        if($(this).attr('class') == 'A button6'){
+                            score+=15;
+                        } else {
+                            score+= -15;
+                        }
+                    
                     var Quest = $("<div></div>").text(questions[4].title);
                     
                     Quest.addClass("form5")
@@ -93,7 +118,8 @@ $(document).ready(function(){
                         var answer = questions[4].choices[i];
                 
                         var answers = $("<button></button>").text(answer);
-                
+                        
+                        answers.addClass("ABCD" [i]);
                         answers.addClass("button7");
                         $("body").append(answers);
                         }
@@ -101,13 +127,19 @@ $(document).ready(function(){
                     $(".form4").remove();
                     $(document).ready(function(){
                         $(".button7").click(function(event) {
+                            if($(this).attr('class') == 'C button7'){
+                                score+=15;
+                            } else {
+                                score+= -15;
+                            }
+                        
                         var Quest = $("<div></div>").text(score);
                         
                         Quest.addClass("form6")
                         $("body").append(Quest);
                     
                         var submit = $("<button></button>").text("submit");
-                    
+                        
                         submit.addClass("button8");
                         $("body").append(submit);
                         $(".button7").remove();
