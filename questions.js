@@ -17,7 +17,7 @@
    {
      title:"how many moons does Uranus have?",
      choices:["Uranus is god of the sea", "27", "2","7"],
-     answer: "Uranus is god of the sea"
+     answer: "27"
    },
    {
      title:"Why are man-holes round?",

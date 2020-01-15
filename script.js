@@ -46,6 +46,7 @@ $(document).ready(function(){
             } else {
                 score+= -15;
                 audioElement1.play();
+                alert("WRONG! Correct answer was... " + questions[0].answer)
             }
             
         var Quest = $("<div></div>").text(questions[1].title);
@@ -72,6 +73,7 @@ $(document).ready(function(){
                 } else {
                     score+= -15;
                     audioElement1.play();
+                    alert("WRONG! Correct answer was... " + questions[1].answer)
                 }
             
             var Quest = $("<div></div>").text(questions[2].title);
@@ -98,6 +100,7 @@ $(document).ready(function(){
                     } else {
                         score+= -15;
                         audioElement1.play();
+                        alert("WRONG! Correct answer was... " + questions[2].answer)
                     }
                 
                 var Quest = $("<div></div>").text(questions[3].title);
@@ -118,12 +121,13 @@ $(document).ready(function(){
                 $(".form3").remove();
                 $(document).ready(function(){
                     $(".button6").click(function(event) {
-                        if($(this).attr('class') == 'A button6'){
+                        if($(this).attr('class') == 'B button6'){
                             score+=15;
                             audioElement2.play();
                         } else {
                             score+= -15;
                             audioElement1.play();
+                            alert("WRONG! Correct answer was... " + questions[3].answer)
                         }
                     
                     var Quest = $("<div></div>").text(questions[4].title);
@@ -150,6 +154,7 @@ $(document).ready(function(){
                             } else {
                                 score+= -15;
                                 audioElement1.play();
+                                alert("WRONG! Correct answer was... " + questions[4].answer)
                             }
                         
                         var Quest = $("<div></div>").text(score);
