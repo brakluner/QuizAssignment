@@ -11,6 +11,12 @@ $(document).ready(function(){
 
 var score = 75
 
+var audioElement1 = document.createElement("audio");
+audioElement1.setAttribute("src", "foghorn.wav");
+
+var audioElement2 = document.createElement("audio");
+audioElement2.setAttribute("src", "harp.wav");
+
 $(document).ready(function(){
     $("#start").click(function(event) {
     var Quest = $("<div></div>").text(questions[0].title);
@@ -29,12 +35,17 @@ $(document).ready(function(){
         }
     $(".button2").remove();
     $("h1").remove();
+    setInterval(function () {
+        --score;
+      }, 1000);
     $(document).ready(function(){
         $(".button3").click(function(event) {
             if($(this).attr('class') == 'B button3'){
                 score+=15;
+                audioElement2.play();
             } else {
                 score+= -15;
+                audioElement1.play();
             }
             
         var Quest = $("<div></div>").text(questions[1].title);
@@ -57,8 +68,10 @@ $(document).ready(function(){
             $(".button4").click(function(event) {
                 if($(this).attr('class') == 'C button4'){
                     score+=15;
+                    audioElement2.play();
                 } else {
                     score+= -15;
+                    audioElement1.play();
                 }
             
             var Quest = $("<div></div>").text(questions[2].title);
@@ -81,8 +94,10 @@ $(document).ready(function(){
                 $(".button5").click(function(event) {
                     if($(this).attr('class') == 'D button5'){
                         score+=15;
+                        audioElement2.play();
                     } else {
                         score+= -15;
+                        audioElement1.play();
                     }
                 
                 var Quest = $("<div></div>").text(questions[3].title);
@@ -105,8 +120,10 @@ $(document).ready(function(){
                     $(".button6").click(function(event) {
                         if($(this).attr('class') == 'A button6'){
                             score+=15;
+                            audioElement2.play();
                         } else {
                             score+= -15;
+                            audioElement1.play();
                         }
                     
                     var Quest = $("<div></div>").text(questions[4].title);
@@ -129,8 +146,10 @@ $(document).ready(function(){
                         $(".button7").click(function(event) {
                             if($(this).attr('class') == 'C button7'){
                                 score+=15;
+                                audioElement2.play();
                             } else {
                                 score+= -15;
+                                audioElement1.play();
                             }
                         
                         var Quest = $("<div></div>").text(score);
