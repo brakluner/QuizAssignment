@@ -1,0 +1,51 @@
+body {
+    background: #e3dea1;
+}
+.button2, .button2 a {
+    background: url(Calltoaction.PNG) 0 -65px;
+    height:65px;
+    width:580px;
+    display:block;
+}
+.button2 a {
+  background-position: 0 0;
+}
+.button3, .button3 a, .button4, .button5, .button6, .button7, .button8 {
+    background: url(CalltoactionA.PNG) 0 -65px;
+    height:65px;
+    width:580px;
+    display:block;
+}
+.button3 a {
+  background-position: 0 0;
+  
+}
+button {
+    margin: auto;
+    width: auto;
+    height: auto;
+    font-family: 'Nanum Gothic Coding', monospace;
+    color: #ffef50;
+}
+h1 {
+    padding: 300px 300px 0 300px;
+    margin: auto;
+    width: auto;
+    height: auto;
+    font-family: 'Amatic SC', cursive;;
+    color: #630000;
+}
+#display {
+    height: auto;
+    width: auto;
+    background-color: #127c4f;
+}
+div {
+    padding: 0 0 0 500px;
+    margin: auto;
+    width: auto;
+    height: auto;
+    font-family: 'Amatic SC', cursive;;
+    color: #630000;
+    font-size: 42px;
+}
