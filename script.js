@@ -3,11 +3,6 @@ $(document).ready(function(){
     $(this).stop().animate({'opacity' : '0'}, 500);
     }, function(){$(this).stop().animate({'opacity' : '1'}, 500);});
 });
-$(document).ready(function(){
-    $('.button3 a').hover(function(){
-    $(this).stop().animate({'opacity' : '0'}, 500);
-    }, function(){$(this).stop().animate({'opacity' : '1'}, 500);});
-});
 
 var score = 75
 
@@ -170,7 +165,9 @@ $(document).ready(function(){
                                 audioElement1.play();
                                 alert("WRONG! Correct answer was... " + questions[4].answer)
                             }
-                        
+                            setInterval(function () {
+                                ++score;
+                              }, 1000);
                         var Quest = $("<div></div>").text(score);
                         
                         Quest.addClass("form6")
@@ -188,18 +185,16 @@ $(document).ready(function(){
                         $(".form5").remove();
                         $(document).ready(function(){
                             $(".button8").click(function(event){
-                                $(document).ready(function(){
 
                                 var winners = [];
                                 nameInput = document.querySelector(".winner");
                                     
-                            winners.push(nameInput + score);
+                                winners.push(nameInput.value);
 
-                            var winTable = $("<div></div>").text(winners);
+                            var winTable = $("<div></div>").text(winners + score);
                             winTable.addClass("form3")
                             $("body").append(winTable);
-                        
-                            });  
+        
                             });    
                         });
                         });
