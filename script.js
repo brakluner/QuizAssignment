@@ -189,12 +189,23 @@ $(document).ready(function(){
                                 var winners = [];
                                 nameInput = document.querySelector(".winner");
                                     
-                                winners.push(nameInput.value);
+                                winners.push(nameInput.value + score);
+                                localStorage.setItem('winners', JSON.stringify(winners));
+                                console.log(winners);
+                                var display = JSON.parse(localStorage.getItem("winners"));
 
-                            var winTable = $("<div></div>").text(winners + score);
-                            winTable.addClass("form3")
+                            
+                            
+                            var winTable = $("<div></div>").text(display);
+                            winTable.addClass("formWin")
                             $("body").append(winTable);
-        
+                            $(".button8").remove();
+                            $(".form6").remove();
+                            $(".winner").remove();
+
+                            var congrats =$("<div></div>").text("HIGHSCORE!")
+                            $("body").append(congrats);
+
                             });    
                         });
                         });
