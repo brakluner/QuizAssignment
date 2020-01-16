@@ -11,12 +11,6 @@ $(document).ready(function(){
 
 var score = 75
 
-var audioElement1 = document.createElement("audio");
-audioElement1.setAttribute("src", "foghorn.wav");
-
-var audioElement2 = document.createElement("audio");
-audioElement2.setAttribute("src", "harp.wav");
-
 $(document).ready(function(){
     $("#start").click(function(event) {
     var Quest = $("<div></div>").text(questions[0].title);
@@ -42,9 +36,13 @@ $(document).ready(function(){
         $(".button3").click(function(event) {
             if($(this).attr('class') == 'B button3'){
                 score+=15;
+                var audioElement2 = document.createElement("audio");
+                audioElement2.setAttribute("src", "harp.wav");
                 audioElement2.play();
             } else {
                 score+= -15;
+                var audioElement1 = document.createElement("audio");
+                audioElement1.setAttribute("src", "foghorn.wav");
                 audioElement1.play();
                 alert("WRONG! Correct answer was... " + questions[0].answer)
             }
@@ -69,9 +67,13 @@ $(document).ready(function(){
             $(".button4").click(function(event) {
                 if($(this).attr('class') == 'C button4'){
                     score+=15;
+                    var audioElement2 = document.createElement("audio");
+                    audioElement2.setAttribute("src", "harp.wav");
                     audioElement2.play();
                 } else {
                     score+= -15;
+                    var audioElement1 = document.createElement("audio");
+                    audioElement1.setAttribute("src", "foghorn.wav");
                     audioElement1.play();
                     alert("WRONG! Correct answer was... " + questions[1].answer)
                 }
@@ -96,9 +98,13 @@ $(document).ready(function(){
                 $(".button5").click(function(event) {
                     if($(this).attr('class') == 'D button5'){
                         score+=15;
+                        var audioElement2 = document.createElement("audio");
+                        audioElement2.setAttribute("src", "harp.wav");
                         audioElement2.play();
                     } else {
                         score+= -15;
+                        var audioElement1 = document.createElement("audio");
+                        audioElement1.setAttribute("src", "foghorn.wav");
                         audioElement1.play();
                         alert("WRONG! Correct answer was... " + questions[2].answer)
                     }
@@ -123,9 +129,13 @@ $(document).ready(function(){
                     $(".button6").click(function(event) {
                         if($(this).attr('class') == 'B button6'){
                             score+=15;
+                            var audioElement2 = document.createElement("audio");
+                            audioElement2.setAttribute("src", "harp.wav");
                             audioElement2.play();
                         } else {
                             score+= -15;
+                            var audioElement1 = document.createElement("audio");
+                            audioElement1.setAttribute("src", "foghorn.wav");
                             audioElement1.play();
                             alert("WRONG! Correct answer was... " + questions[3].answer)
                         }
@@ -150,9 +160,13 @@ $(document).ready(function(){
                         $(".button7").click(function(event) {
                             if($(this).attr('class') == 'C button7'){
                                 score+=15;
+                                var audioElement2 = document.createElement("audio");
+                                audioElement2.setAttribute("src", "harp.wav");
                                 audioElement2.play();
                             } else {
                                 score+= -15;
+                                var audioElement1 = document.createElement("audio");
+                                audioElement1.setAttribute("src", "foghorn.wav");
                                 audioElement1.play();
                                 alert("WRONG! Correct answer was... " + questions[4].answer)
                             }
