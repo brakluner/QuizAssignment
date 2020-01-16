@@ -177,11 +177,31 @@ $(document).ready(function(){
                         $("body").append(Quest);
                     
                         var submit = $("<button></button>").text("submit");
+                        var inputName = $("<input></input>").text("name");
                         
                         submit.addClass("button8");
                         $("body").append(submit);
+                        inputName.addClass("winner");
+                        inputName.attr("placeholder", "Your Name");
+                        $("body").append(inputName);
                         $(".button7").remove();
                         $(".form5").remove();
+                        $(document).ready(function(){
+                            $(".button8").click(function(event){
+                                $(document).ready(function(){
+
+                                var winners = [];
+                                nameInput = document.querySelector(".winner");
+                                    
+                            winners.push(nameInput + score);
+
+                            var winTable = $("<div></div>").text(winners);
+                            winTable.addClass("form3")
+                            $("body").append(winTable);
+                        
+                            });  
+                            });    
+                        });
                         });
                     });
                     });
