@@ -57,3 +57,11 @@ input {
     color: #630000;
     font-size: 42px;
 }
+ol {
+    margin: 0 0 0 500px;
+    width: auto;
+    height: auto;
+    font-family: 'Amatic SC', cursive;;
+    color: #630000;
+    font-size: 42px;
+}
