@@ -186,24 +186,33 @@ $(document).ready(function(){
                         $(document).ready(function(){
                             $(".button8").click(function(event){
 
-                                var winners = [];
+                                var winners = JSON.parse(localStorage.getItem("winners")) || [];
                                 nameInput = document.querySelector(".winner");
                                     
                                 winners.push(nameInput.value + score);
                                 localStorage.setItem('winners', JSON.stringify(winners));
                                 console.log(winners);
-                                var display = JSON.parse(localStorage.getItem("winners"));
+                                var winTable = $("<ol></ol>");
 
+                                for (var i = 0; i < winners.length && i < 10; i++) {
+                                    var todo = winners[i];
+                                
+                                    var li = $("<li></li>").text(todo);
+                                
+                                    //$("winTable").append(li);
+
+                                    li.appendTo(winTable);
+                                    
+                                }
                             
                             
-                            var winTable = $("<div></div>").text(display);
                             winTable.addClass("formWin")
                             $("body").append(winTable);
                             $(".button8").remove();
                             $(".form6").remove();
                             $(".winner").remove();
 
-                            var congrats =$("<div></div>").text("HIGHSCORE!")
+                            var congrats =$("<div></div>").text("TOP TEN!")
                             $("body").append(congrats);
 
                             });    
